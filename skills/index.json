@@ -1,0 +1,133 @@
+{
+  "skills": [
+    {
+      "name": "creating-backstage-plugin",
+      "description": "Use when the user wants to create a new Backstage plugin. Drives `yarn new` to scaffold the right template and optionally pre-wires common patterns (catalog access, identity, etc.) based on user intent. Triggers on phrases like \"create a new plugin\", \"scaffold a Backstage plugin\", \"I want to add a frontend/backend plugin\".",
+      "files": [
+        "SKILL.md",
+        "references/templates.md",
+        "references/intent-detection.md"
+      ]
+    },
+    {
+      "name": "using-backstage-frontend-system",
+      "description": "Use when defining or authoring extensions for a Backstage frontend plugin in the new frontend system. Covers createFrontendPlugin, route refs from @backstage/frontend-plugin-api, ApiBlueprint, PageBlueprint, SubPageBlueprint, and hook usage. Triggers on imports from @backstage/frontend-plugin-api or when writing src/plugin.tsx, src/routes.ts, src/apis.ts, src/extensions.tsx.",
+      "files": [
+        "SKILL.md",
+        "references/plugin-definition.md",
+        "references/route-refs.md",
+        "references/api-extensions.md",
+        "references/page-extensions.md",
+        "references/sub-pages.md",
+        "references/hooks.md"
+      ]
+    },
+    {
+      "name": "using-backstage-ui",
+      "description": "Use when authoring UI for a Backstage frontend plugin. Covers the @backstage/ui (BUI) component library — layout, typography, forms, dialogs, menus, tables — plus styling via CSS modules with BUI design tokens, and Remix Icons. Triggers on imports of @backstage/ui or when creating any frontend component.",
+      "files": [
+        "SKILL.md",
+        "references/components.md",
+        "references/styling.md",
+        "references/icons.md"
+      ]
+    },
+    {
+      "name": "using-backstage-backend-system",
+      "description": "Use when defining or authoring a Backstage backend plugin or module. Covers createBackendPlugin and createBackendModule from @backstage/backend-plugin-api, service registration via coreServices.* refs, and exposing extension points with createExtensionPoint. Triggers on imports from @backstage/backend-plugin-api or when writing src/plugin.ts, src/module.ts, src/index.ts in a backend package.",
+      "files": [
+        "SKILL.md",
+        "references/plugin-definition.md",
+        "references/modules.md",
+        "references/extension-points.md"
+      ]
+    },
+    {
+      "name": "using-backstage-backend-services",
+      "description": "Use when a Backstage backend plugin or module needs a core service — logger, config, http router, database, scheduler, lifecycle, cache, urlReader, discovery, auth, httpAuth, or userInfo. Triggers on imports of coreServices.* refs from @backstage/backend-plugin-api or any deps map in a plugin/module register block.",
+      "files": [
+        "SKILL.md",
+        "references/logger-and-config.md",
+        "references/http-router.md",
+        "references/database.md",
+        "references/scheduler-and-lifecycle.md",
+        "references/auth.md",
+        "references/urlReader-and-discovery.md",
+        "references/cache.md"
+      ]
+    },
+    {
+      "name": "using-backstage-identity",
+      "description": "Use when a Backstage frontend plugin needs information about the currently logged-in user — their entity ref, profile info, ownership refs, or auth token. Triggers on phrases like \"current user\", \"logged-in user\", \"my groups\", or imports of identityApiRef.",
+      "files": ["SKILL.md", "references/current-user.md"]
+    },
+    {
+      "name": "using-backstage-catalog",
+      "description": "Use when a Backstage plugin needs to interact with the catalog — fetching one entity by ref, querying entities with filters, or registering/unregistering catalog locations. Triggers on imports of catalogApiRef from @backstage/plugin-catalog-react, or @backstage/catalog-client in backend code.",
+      "files": [
+        "SKILL.md",
+        "references/fetch-by-ref.md",
+        "references/query-entities.md",
+        "references/register-entity.md"
+      ]
+    },
+    {
+      "name": "creating-backstage-catalog-provider",
+      "description": "Use when building a catalog backend module that ingests entities from an external source (e.g. Azure DevOps, internal API, JSON file). Covers both the normal EntityProvider and the IncrementalEntityProvider for large-volume sources, plus module wiring via catalogProcessingExtensionPoint or incrementalIngestionProvidersExtensionPoint. Triggers on phrases like \"catalog provider\", \"ingest entities from X\", \"import entities from <source>\", or \"incremental ingestion\".",
+      "files": [
+        "SKILL.md",
+        "references/entity-provider.md",
+        "references/module-registration.md"
+      ]
+    },
+    {
+      "name": "creating-backstage-scaffolder-action",
+      "description": "Use when building a custom scaffolder template action — a step that scaffolder templates can call from their YAML steps. Covers createTemplateAction with Zod input/output schemas, the action handler context (logger, workspacePath, input, output, etc.), and module wiring via scaffolderActionsExtensionPoint. Triggers on phrases like \"scaffolder action\", \"template action\", \"custom action\".",
+      "files": [
+        "SKILL.md",
+        "references/template-action.md",
+        "references/module-registration.md"
+      ]
+    },
+    {
+      "name": "creating-backstage-scaffolder-field",
+      "description": "Use when building a custom scaffolder form field — a React component that scaffolder template forms can use via `ui:field: <name>`. Covers FormFieldBlueprint, createFormField, the field component props (formData, onChange, schema, rawErrors, etc.), Zod-based field schema via makeFieldSchema, optional validation, and registering the field as a frontend extension. Triggers on phrases like \"scaffolder field\", \"custom field extension\", \"form field for scaffolder templates\", \"ui:field\".",
+      "files": [
+        "SKILL.md",
+        "references/field-component.md",
+        "references/field-schema.md",
+        "references/field-validation.md",
+        "references/field-registration.md"
+      ]
+    },
+    {
+      "name": "using-backstage-permissions",
+      "description": "Use when a Backstage plugin needs to gate UI behind permissions (frontend) or authorize actions in route handlers (backend). Covers createPermission, the usePermission hook and RequirePermission component, the coreServices.permissions service for backend authorization, and resource permissions for per-instance checks. Triggers on phrases like \"require permission\", \"gate this UI\", \"check authorization\", or imports of @backstage/plugin-permission-common, @backstage/plugin-permission-react, or @backstage/plugin-permission-node.",
+      "files": [
+        "SKILL.md",
+        "references/declaring.md",
+        "references/frontend.md",
+        "references/backend.md",
+        "references/resource-permissions.md"
+      ]
+    },
+    {
+      "name": "creating-backstage-entity-page-extension",
+      "description": "Use when adding a card to a catalog entity's overview tab or a whole tab/page to a catalog entity page. Covers EntityCardBlueprint (overview-page cards) and EntityContentBlueprint (full tabs), entity filtering by kind/type/annotation, and access to the current entity via useEntity. Triggers on phrases like \"card on the entity page\", \"tab on the component page\", \"show on entity overview\", \"ui:field for catalog entity page\", or imports of EntityCardBlueprint / EntityContentBlueprint.",
+      "files": [
+        "SKILL.md",
+        "references/card.md",
+        "references/content.md"
+      ]
+    },
+    {
+      "name": "creating-backstage-extension-blueprint",
+      "description": "Use when authoring a Backstage frontend plugin that wants to expose its OWN extension point — a typed \"blueprint\" that other plugins or modules can call to contribute to your plugin's UI. Covers createExtensionBlueprint (defining the blueprint), the parent extension that collects contributions via inputs, factory functions, configSchema for adopter overrides, and dataRefs for consumer access. Triggers on phrases like \"create a blueprint\", \"expose an extension point on the frontend\", \"let other plugins extend my page\", or imports of createExtensionBlueprint from @backstage/frontend-plugin-api.",
+      "files": [
+        "SKILL.md",
+        "references/defining-the-blueprint.md",
+        "references/parent-collecting-extensions.md"
+      ]
+    }
+  ]
+}
