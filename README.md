@@ -7,7 +7,7 @@ A skill pack for [Claude Code](https://claude.com/claude-code) (and other [skill
 In any Backstage adopter repo:
 
 ```bash
-npx skills add vinzscam/backstage-skills --all
+npx skills add vinzscam/backstage-skills --skill '*'
 ```
 
 Or pick individual skills interactively:
