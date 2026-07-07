@@ -7,28 +7,28 @@ A skill pack for [Claude Code](https://claude.com/claude-code) (and other [skill
 In any Backstage adopter repo:
 
 ```bash
-npx skills add vinzscam/backstage-skills --skill '*'
+npx skills add nosportugal/backstage-skills --skill '*'
 ```
 
 Or pick individual skills interactively:
 
 ```bash
-npx skills add vinzscam/backstage-skills
+npx skills add nosportugal/backstage-skills
 ```
 
 ### As a Claude Code / GitHub Copilot CLI plugin
 
-This repo also ships a `.claude-plugin/plugin.json`, so it can be installed as a
-plugin from the `calex` marketplace:
+This repo is also a self-hosted plugin marketplace (`.claude-plugin/marketplace.json`),
+so you can install the skill pack as a plugin straight from it:
 
 ```bash
 # Claude Code
-claude plugin marketplace add calexandre/copilot-plugins
-claude plugin install backstage-skills@calex
+claude plugin marketplace add nosportugal/backstage-skills
+claude plugin install backstage-skills@backstage-skills
 
 # GitHub Copilot CLI
-copilot plugin marketplace add calexandre/copilot-plugins
-copilot plugin install backstage-skills@calex
+copilot plugin marketplace add nosportugal/backstage-skills
+copilot plugin install backstage-skills@backstage-skills
 ```
 
 ## Usage

@@ -1,0 +1,15 @@
+{
+  "name": "backstage-skills",
+  "owner": { "name": "nosportugal" },
+  "description": "Self-hosted marketplace for the Backstage skill pack. Install the backstage-skills plugin for Claude Code or GitHub Copilot CLI directly from this repository.",
+  "plugins": [
+    {
+      "name": "backstage-skills",
+      "source": "./",
+      "description": "A skill pack for Claude Code and other skills.sh compatible agents that helps Backstage adopters create new plugins and apply common Backstage patterns idiomatically.",
+      "author": { "name": "calexandre", "email": "calexandre@users.noreply.github.com" },
+      "keywords": ["backstage", "skills", "plugin-authoring"],
+      "category": "backstage"
+    }
+  ]
+}

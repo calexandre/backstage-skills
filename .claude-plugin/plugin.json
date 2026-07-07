@@ -3,7 +3,7 @@
   "description": "A skill pack for Claude Code and other https://skills.sh compatible agents that helps Backstage adopters create new plugins and apply common Backstage patterns idiomatically.",
   "version": "1.0.0",
   "author": { "name": "calexandre", "email": "calexandre@users.noreply.github.com" },
-  "homepage": "https://github.com/calexandre/backstage-skills",
-  "repository": "https://github.com/calexandre/backstage-skills",
+  "homepage": "https://github.com/nosportugal/backstage-skills",
+  "repository": "https://github.com/nosportugal/backstage-skills",
   "keywords": ["backstage", "skills", "plugin-authoring"]
 }
